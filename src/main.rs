@@ -17,7 +17,7 @@ use std::iter::{once, zip};
 use std::{io, rc::Rc};
 
 fn main() -> io::Result<()> {
-    let backend = CanvasBackend::new()?;
+    let backend = DomBackend::new()?;
     let terminal = Terminal::new(backend)?;
 
     let state = Rc::new(App::default());
